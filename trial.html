@@ -4,18 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="function.js"></script>
     </head>
     
     <body>
-        <div class="header">
-            <div class="bar white wide padding card">
-                <a href="#home" class="baritem button"><b>CAT</b> sellar</a>
-            <!-- SUB BUTTONS -->
-                <div class="right">
-                    <a href="#category" class="baritem button">Category</a>
-                    <a href="#basket" class="baritem button">Basket</a>
+        <div id="main">
+            <div id="mainTitle" class="header">
+                <div id="bar" class="bar white wide padding card">
+                    <a href="#" class="baritem button" onclick="openSidebar()">&#9776;</a>
+                    <a href="#home" class="baritem button" style="font-size: 20px"><b>CAT</b>pedia</a>
+                    <div class="right">
+                        <a href="#home" class="baritem button">Home</a>
+                        <a href="#basket" class="baritem button">Basket</a>
+                        <a href="#chat" class="baritem button">Chat</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div id="sideBar" class="sidenav wide">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Category</a>
+            <a href="#">Events</a>
+            <a href="#">Information</a>
+            <a href="#">Contact</a>
+        </div>
+
     </body>
 </html>

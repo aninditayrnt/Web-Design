@@ -1,36 +1,65 @@
 /* Font Style */
+
+@font-face
+{
+    font-family:'Advent Pro';
+    src:url('https://fonts.google.com/specimen/Advent+Pro');
+}
+
 h1,h2,h3,h4,h5,h6{
-    font-family:"Segoe UI",Arial,sans-serif;
+    font-family: 'Advent Pro';
+    /* font-family:"Open Sans",Arial,sans-serif; */
     font-weight:400;
     margin:10px 0
+}
+
+.white{
+    color: #000;
+    background-color: #fff
+}
+
+.white:hover{
+    color: #000;
+    background-color: #fff
+}
+
+.red{
+    color: #fff
+}
+
+.red:hover{
+    color: #fd3c38;
+    background-color: #fff
+}
+
+.large-grey-text{
+    color: #757575;
+    font-size: 15px
 }
 
 .wide{
     letter-spacing:4px
 }
 
-/* Floating Bar */
+/* HEADER */
+
 .header{
-    top: 0
+    top: 0;
 }
 
 .bar{
-    width:100%;
+    width:97%;
     overflow:hidden
 }
 
+/* BUTTON */
+
 .baritem{
-    padding:8px 16px;
     float:left;
     width:auto;
     border:none;
     display:block;
     outline:0
-}
-
-.white{
-    color: #000;
-    background-color: #fff
 }
 
 .padding{
@@ -48,10 +77,10 @@ h1,h2,h3,h4,h5,h6{
     background-color:inherit;
     text-align:center;
     cursor:pointer;
-    white-space:nowrap
+    white-space:nowrap;
+    transition-duration: 0.3s
 }
 
-/* To make the header looks like pop up*/
 .card{
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
 }
@@ -64,4 +93,51 @@ h1,h2,h3,h4,h5,h6{
 
 .left{
     float: left
+}
+
+/* SideBar */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
